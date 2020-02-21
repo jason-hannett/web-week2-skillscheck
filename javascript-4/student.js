@@ -60,14 +60,13 @@ let homeTown = me.homeTown;
 // These arguments should be the three items remaining in your colors array. 
 
 function setColor(arr){
-   arr.length > 3 ? arr.splice(0, 1): null;
-
-   for (i = 0; i < arr.length; i++){
+    arr.splice(3);
+    for (let i = 0; i < arr.length; i++){
        if (arr[i] === "blue"){
-           return arr[i] = "#4D4DFF";
+           return arr[i] = '#4D4DFF'
        }
    }
-   background(arr);
+   background(...arr)
 }
 
 
@@ -78,9 +77,7 @@ function setColor(arr){
 // is a function we created that determines how the content is displayed.
 
 function setPowers(arr){
-    for (i = 0; arr.length; i++){
-        createLi(arr[i])
-    }
+   arr.forEach(element => createLi(element))
 }
 
 
